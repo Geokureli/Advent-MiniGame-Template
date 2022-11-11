@@ -4,8 +4,15 @@ import flixel.FlxG;
 import flixel.text.FlxText;
 import flixel.FlxState;
 
+/** 
+ * PlayState.hx is where Advent will start to access your game,
+ * if you would like to add a menu to your game contact George!
+**/
 class PlayState extends FlxState
 {
+	//Initialize Variables Here
+
+	//This is the Start function
 	override function create()
 	{
 		super.create();
@@ -19,11 +26,14 @@ class PlayState extends FlxState
 		add(info);
 	}
 
+	/** This is where your game updates each frame */
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
 		
+		//Code for your PlayState starts here
 		if (Controls.pressed.A)
+			//Your failure has sent you to the GameOverState.hx
 			Global.switchState(new GameOverState());
 	}
 }
