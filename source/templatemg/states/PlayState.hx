@@ -22,7 +22,7 @@ class PlayState extends FlxState
 		info.text = "This is the play state.\n"
 			+ "You're having so much fun. \n"
 			+ "Press Z to continue.";
-		info.screenCenter();
+		Global.screenCenter(info);
 		add(info);
 	}
 
@@ -32,7 +32,7 @@ class PlayState extends FlxState
 		super.update(elapsed);
 		
 		//Code for your PlayState starts here
-		if (Controls.pressed.A)
+		if (Controls.justPressed.A)
 			//Your failure has sent you to the GameOverState.hx
 			Global.switchState(new GameOverState());
 	}

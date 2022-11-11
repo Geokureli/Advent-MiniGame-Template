@@ -33,7 +33,8 @@ Anything extra you can add the normal way!
 
 ## Caveats
 To allow your game to work in both stand-alone as well as in Advent, use `Global` methods
-- Use `Global.width/height` instead of `FlxG.width/height`. Similarly, `sprite.screenCenter(X)` will also use `FlxG.width` and should be avoided
+- Use `Global.width/height` instead of `FlxG.width/height`.
+- Use `Global.screenCenter(obj, XY)` instead of `obj.screenCenter(XY)`, since the latter uses `FlxG.width`.
 - Use `Global.state` instead of `FlxG.state`.
 - Use `Global.switchState` and `Global.resetState` instead of `FlxG.switchState` and `FlxG.resetState`.
 - Use `Global.asset("assets/images/hentai.png")` whenever passing a path into an asset loader.

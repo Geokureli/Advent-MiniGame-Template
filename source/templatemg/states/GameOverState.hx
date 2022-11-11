@@ -24,7 +24,7 @@ class GameOverState extends FlxState
 			+ "Game by\nlil' georgie\n\n"
 			+ "Coded by\nyour mom\n\n"
 			+ "Music by\nbrandy's nose-flute";
-		screenCenter(info);
+		Global.screenCenter(info);
 		add(info);
 	}
 
@@ -34,37 +34,8 @@ class GameOverState extends FlxState
 		super.update(elapsed);
 		
 		//Code for your GameOverState starts here
-		if (Controls.pressed.A)
+		if (Controls.justPressed.A)
 			//This loops back to your PlayState.hx
 			Global.switchState(new PlayState());
-	}
-
-	/**
-	 * Overwrite screenCenter here so it doesn't use FlxG.width 
-	 * [read more](https://github.com/Geokureli/Advent-MiniGame-Template/blob/master/README.md?plain=1#L36)
-	**/
-	inline function screenCenterX(obj:FlxObject)
-	{
-		obj.x = (Global.width - obj.width) / 2;
-	}
-		
-	inline function screenCenterY(obj:FlxObject)
-	{
-		obj.y = (Global.height - obj.height) / 2;
-	}
-
-	inline function screenCenter(obj:FlxObject, axes = FlxAxes.XY)
-	{
-		switch (axes)
-		{
-			case NONE:
-			case XY:
-				screenCenterX(obj);
-				screenCenterY(obj);
-			case X:
-				screenCenterX(obj);
-			case Y:
-				screenCenterY(obj);
-		}
 	}
 }

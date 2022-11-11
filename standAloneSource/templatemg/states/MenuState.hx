@@ -22,7 +22,7 @@ class MenuState extends flixel.FlxState
 			+ "This will only show in stand-alone mode.\n"
 			+ "In tankmas it will just start the game.\n"
 			+ "Press Z to play.";
-		info.screenCenter();
+		Global.screenCenter(info);
 		add(info);
 	}
 	
