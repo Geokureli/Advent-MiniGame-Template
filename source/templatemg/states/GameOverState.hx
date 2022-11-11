@@ -24,7 +24,6 @@ class GameOverState extends FlxState
 			+ "Game by\nlil' georgie\n\n"
 			+ "Coded by\nyour mom\n\n"
 			+ "Music by\nbrandy's nose-flute";
-		info.screenCenter();
 		screenCenter(info);
 		add(info);
 	}
