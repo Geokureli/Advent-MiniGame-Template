@@ -40,13 +40,13 @@ To allow your game to work in both stand-alone as well as in Advent, use `Global
 - Use `Global.screenCenter(obj, XY)` instead of `obj.screenCenter(XY)`, since the latter uses `FlxG.width`.
 - Use `Global.state` instead of `FlxG.state`.
 - Use `Global.switchState` and `Global.resetState` instead of `FlxG.switchState` and `FlxG.resetState`.
-- Use `Global.asset("assets/images/hentai.png")` whenever passing a path into an asset loader.
+- Use `Global.asset("assets/images/myFile.png")` whenever passing a path into an asset loader.
 - Use `Global.cancelTweensOf` instead of `FlxTween.cancelTweensOf`.
 
 Note: The `Global` and `Controls` class are auto imported everywhere, via `import.hx`.
 
-When played via advent, all your asset paths will be renamed to "assets/templatemg/images/hentai.png",
-and in stand-alone mode they will be "assets/images/hentai.png", hence why Global.assets in neccesary.
+When played via advent, all your asset paths will be renamed to "assets/templatemg/images/myFile.png",
+and in stand-alone mode they will be "assets/images/myFile.png", hence why Global.assets in neccesary.
 `AssetPaths.hx` is also not an option.
 
 Any code you want to only run when in stand-alone mode should be wrapped in `#if STAND_ALONE` checks,
