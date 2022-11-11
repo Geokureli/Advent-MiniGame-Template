@@ -1,0 +1,1 @@
+This is the template minigame for advent 2022.
