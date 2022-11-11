@@ -1,4 +1,6 @@
-This is the template minigame for advent 2022. For the most part, just grab this,
+This is the template minigame for advent 2022.
+
+For the most part, just grab this,
 and code your game as usual and I'll know how to include it.
 
 ## Setup
